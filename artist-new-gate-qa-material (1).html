@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTIST NEW GATE コンテストQA集</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: rgba(0,0,0,0.87);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        h1 {
+            color: #3f51b5;
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        .card-header {
+            background-color: #3f51b5;
+            color: white;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .card-content {
+            padding: 16px;
+        }
+        .question {
+            margin-bottom: 16px;
+            cursor: pointer;
+        }
+        .question-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+        .question-content {
+            display: none;
+            margin-top: 8px;
+            padding-left: 24px;
+            color: rgba(0,0,0,0.6);
+        }
+        .toggle-icon {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ARTIST NEW GATE コンテストQA集</h1>
+        
+        <div class="card">
+            <div class="card-header">応募資格・条件に関する質問</div>
+            <div class="card-content">
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>応募資格はありますか？年齢制限はありますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>海外からの応募は可能ですか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>グループでの応募は可能ですか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>過去に受賞歴がある場合、応募できますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">作品に関する質問</div>
+            <div class="card-content">
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>どのようなジャンルの作品が応募可能ですか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>作品のサイズや重量に制限はありますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>デジタル作品は応募可能ですか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>共同制作の作品は応募可能ですか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>応募作品の著作権はどうなりますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>過去に発表した作品でもポートフォリオ審査は問題ないですか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">応募プロセスに関する質問</div>
+            <div class="card-content">
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>応募料はかかりますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>締切過ぎてしまったのですが応募しても大丈夫でしょうか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>応募に関して、Googleフォーム入力がうまくいきませんがどうしたらいいでしょうか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>作品ファイルが添付できません。</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>PDFファイル以外でもいいでしょうか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">審査に関する質問</div>
+            <div class="card-content">
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>審査基準を教えてください。</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>落選した場合、理由を聞くことはできますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">賞に関する質問</div>
+            <div class="card-content">
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>どのような賞がありますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>賞金や副賞はありますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>入賞後のサポートはありますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">作品の取り扱いに関する質問</div>
+            <div class="card-content">
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>応募作品の返却はありますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>返送日はいつですか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>作品審査は直接持ち込んでもいいですか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>作品の保管や輸送中の保険はどうなっていますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">その他の質問</div>
+            <div class="card-content">
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>プライバシーポリシーはどうなっていますか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>問い合わせ先を教えてください。</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="question-title">
+                        <span>SNSでの作品公開は可能ですか？</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="question-content">ここに回答を記入してください。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(element) {
+            const content = element.querySelector('.question-content');
+            const icon = element.querySelector('.toggle-icon');
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                icon.textContent = '+';
+            } else {
+                content.style.display = 'block';
+                icon.textContent = '-';
+            }
+        }
+    </script>
+</body>
+</html>
